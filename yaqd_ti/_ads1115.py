@@ -4,6 +4,9 @@ from typing import Dict, Any
 
 from yaqd_core import Sensor
 
+from .__version__ import __branch__
+
+
 channel_mapping = {}
 channel_mapping["channel01"] = 0b000
 channel_mapping["channel03"] = 0b001
@@ -35,6 +38,7 @@ rate_mapping[860] = 0b111
 
 class ADS1115(Sensor):
     _kind = "ads1115"
+    _version = "1.0.0" + f"+{__branch__}" if __branch__ else ""
     traits = ["uses-i2c", "uses-serial"]
     defaults: Dict[str, Any] = {}
 
