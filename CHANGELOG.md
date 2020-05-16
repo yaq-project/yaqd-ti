@@ -9,6 +9,9 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/).
 - added changelog
 - added daemon-level version, see [YEP-105](https://yeps.yaq.fyi/105/)
 
+### Changed
+- refactored ci
+
 ## [0.1.0]
 
 ### Added

@@ -15,7 +15,7 @@ with open("README.md") as readme_file:
     readme = readme_file.read()
 
 
-requirements = ["yaqd-core"]
+requirements = ["yaqd-core", "smbus"]
 
 extra_requirements = {"dev": ["black", "pre-commit"]}
 extra_files = {"yaqd_ti": ["VERSION"]}
@@ -35,11 +35,7 @@ setup(
         "Topic :: Scientific/Engineering",
     ],
     description="yaq daemons for interfacing with Texas Instruments integrated circuits",
-    entry_points={
-        "console_scripts": [
-            "yaqd-ads1115=yaqd_ti._ads1115:ADS1115.main",
-        ],
-    },
+    entry_points={"console_scripts": ["yaqd-ads1115=yaqd_ti._ads1115:ADS1115.main",],},
     install_requires=requirements,
     extras_require=extra_requirements,
     license="GNU Lesser General Public License v3 (LGPL)",
