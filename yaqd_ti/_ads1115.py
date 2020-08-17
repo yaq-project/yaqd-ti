@@ -1,5 +1,5 @@
 import asyncio
-import smbus  # type: ignore
+import smbus2 as smbus  # type: ignore
 from typing import Dict, Any
 
 from yaqd_core import Sensor
