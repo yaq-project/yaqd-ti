@@ -4,8 +4,6 @@ from typing import Dict, Any
 
 from yaqd_core import Sensor
 
-from .__version__ import __branch__
-
 
 channel_mapping = {}
 channel_mapping["channel01"] = 0b000
@@ -38,26 +36,23 @@ rate_mapping[860] = 0b111
 
 class ADS1115(Sensor):
     _kind = "ads1115"
-    _version = "1.0.0" + f"+{__branch__}" if __branch__ else ""
-    traits = ["uses-i2c", "uses-serial"]
-    defaults: Dict[str, Any] = {}
 
     def __init__(self, name, config, config_filepath):
         super().__init__(name, config, config_filepath)
-        self.fsr = config["fsr"]
-        self.rate = config["rate"]
+        self.fsr = float(config["fsr"])
+        self.rate = int(config["rate"])
         self.address = config["i2c_addr"]
         self.bus = smbus.SMBus(1)
         # populate channels metadata
-        self.channel_names = []
-        self.channel_units = {}
+        self._channel_names = []
+        self._channel_units = {}
         for c in config["channels"]:
-            self.channel_names.append(f"channel{c}")
-            self.channel_units[f"channel{c}"] = "V"
+            self._channel_names.append(f"channel{c}")
+            self._channel_units[f"channel{c}"] = "V"
 
     async def _measure(self):
         out = {}
-        for key in self.channel_names:
+        for key in self._channel_names:
             # write to the config register
             config_byte_0 = 0x00
             config_byte_0 |= 1 << 7  # start a single conversion

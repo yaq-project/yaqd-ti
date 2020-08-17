@@ -12,4 +12,4 @@ yaq daemons for interfacing with Texas Instruments integrated circuits
 
 This package contains the following daemon(s):
 
-- https://yaq.fyi/daemons/ads1115
+- [ads1115](https://yaq.fyi/daemons/ads1115)
