@@ -14,6 +14,12 @@
             ],
             "type": "enum"
         },
+        "enable": {
+            "default": true,
+            "doc": "Disable this daemon. The kind entry-point will not attempt to start this daemon.",
+            "origin": "is-daemon",
+            "type": "boolean"
+        },
         "fsr": {
             "name": "fsr",
             "symbols": [
@@ -30,6 +36,31 @@
             "doc": "I2C bus address.",
             "origin": "uses-i2c",
             "type": "int"
+        },
+        "log_level": {
+            "default": "info",
+            "doc": "Set daemon log-level.",
+            "origin": "is-daemon",
+            "type": {
+                "name": "level",
+                "symbols": [
+                    "debug",
+                    "info",
+                    "notice",
+                    "warning",
+                    "error",
+                    "critical",
+                    "alert",
+                    "emergency"
+                ],
+                "type": "enum"
+            }
+        },
+        "log_to_file": {
+            "default": false,
+            "doc": "Optionally force logging to a file.",
+            "origin": "is-daemon",
+            "type": "boolean"
         },
         "loop_at_startup": {
             "default": false,
@@ -223,10 +254,10 @@
     "requires": [],
     "traits": [
         "is-daemon",
-        "is-sensor",
         "uses-serial",
-        "has-measure-trigger",
-        "uses-i2c"
+        "is-sensor",
+        "uses-i2c",
+        "has-measure-trigger"
     ],
     "types": [
         {
