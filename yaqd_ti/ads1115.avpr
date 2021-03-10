@@ -253,11 +253,11 @@
     "protocol": "ads1115",
     "requires": [],
     "traits": [
+        "has-measure-trigger",
         "is-daemon",
-        "uses-serial",
         "is-sensor",
         "uses-i2c",
-        "has-measure-trigger"
+        "uses-serial"
     ],
     "types": [
         {
