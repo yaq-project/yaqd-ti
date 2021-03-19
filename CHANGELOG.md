@@ -5,6 +5,11 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/).
 
 ## [Unreleased]
 
+## [2021.3.0]
+
+### Changed
+- updated is-sensor trait
+
 ## [2020.12.0]
 
 ### Changed
@@ -36,7 +41,8 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/).
 ### Added
 - initial release
 
-[Unreleased]: https://gitlab.com/yaq/yaqd-ti/-/compare/v2020.12.0...master
+[Unreleased]: https://gitlab.com/yaq/yaqd-ti/-/compare/v2021.3.0...master
+[2021.3.0]: https://gitlab.com/yaq/yaqd-ti/-/compare/v2020.12.0...2021.3.0
 [2020.12.0]: https://gitlab.com/yaq/yaqd-ti/-/compare/v2020.08.1...2020.12.0
 [2020.08.1]: https://gitlab.com/yaq/yaqd-ti/-/compare/v2020.08.0...2020.08.1
 [2020.08.0]: https://gitlab.com/yaq/yaqd-ti/-/compare/v2020.05.0...2020.08.0
