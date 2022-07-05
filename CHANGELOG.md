@@ -5,6 +5,9 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/).
 
 ## [Unreleased]
 
+### Changed
+- changed symbols to valid avro types
+
 ## [2021.10.0]
 
 ### Changed

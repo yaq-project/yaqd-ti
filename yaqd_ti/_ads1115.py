@@ -82,9 +82,9 @@ class ADS1115(Sensor):
             data = self.bus.read_i2c_block_data(self.address, 0x00, 2)
             v = data[0] << 8 | data[1]
             if v > 128:
-                v = -(2 ** 16) + v
+                v = -(2**16) + v
             v *= self.fsr
-            v /= 2 ** 16
+            v /= 2**16
             v *= 2
             out[key] = v
             await asyncio.sleep(0.1)
