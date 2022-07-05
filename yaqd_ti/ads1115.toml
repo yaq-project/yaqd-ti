@@ -17,24 +17,24 @@ conda-forge = "https://anaconda.org/conda-forge/yaqd-ti"
 [config.channels]
 type = "enum"
 name = "channels"
-symbols = ["01",
-           "03",
-	   "13",
-	   "23",
-	   "0",
-	   "1",
-	   "2",
-	   "3"
+symbols = ["C01",
+           "C03",
+	   "C13",
+	   "C23",
+	   "C0",
+	   "C1",
+	   "C2",
+	   "C3"
 	   ]
 
 [config.fsr]
 type = "enum"
 name = "fsr"
-symbols = ["6.144",
-           "4.096",
-	   "2.048",
-	   "1.024",
-	   "0.512"
+symbols = ["V6_144",
+           "V4_096",
+	   "V2_048",
+	   "V1_024",
+	   "V0_512"
 	   ]
 
 [config.i2c_addr]
@@ -43,12 +43,12 @@ default = 72
 [config.rate]
 type = "enum"
 name = "rate"
-symbols = ["8",
-           "16",
-	   "32",
-	   "64",
-	   "128",
-	   "250",
-	   "475",
-	   "860"
+symbols = ["R8",
+           "R16",
+	   "R32",
+	   "R64",
+	   "R128",
+	   "R250",
+	   "R475",
+	   "R860"
 	   ]
