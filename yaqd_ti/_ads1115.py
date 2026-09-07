@@ -4,7 +4,6 @@ from typing import Dict, Any
 
 from yaqd_core import Sensor
 
-
 channel_mapping = {}
 channel_mapping["channel01"] = 0b000
 channel_mapping["channel03"] = 0b001
